@@ -13,6 +13,7 @@ class GalagaInvaders
   def initialize
     @caption = "Galaga Invaders"
     @ship = Ship.new(SCREEN_WIDTH / 2, HEIGHT - Ship::HEIGHT)
+    @missile = Missile.new(Ship.missile_coordinates)
   end
 
   def update

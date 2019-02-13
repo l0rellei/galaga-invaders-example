@@ -8,6 +8,7 @@ class Ship
   WIDTH = 100
   HEIGHT = 200
 
+
   def initialize(x, y)
     @x = x
     @y = y
@@ -19,21 +20,33 @@ class Ship
   end
 
   def move_right
-    @x += 5
+    @x += 5 
   end
 
   def fire
     @missile_coordinates << [@x, @y - HEIGHT / 2]
   end
 
+  
+
+  def draw
+    # Ignore this
+  end
+
+  
+
+end
+
+class missile
+
+  def initialize
+
+  end
+
   def move_missiles
     @missile_coordinates.each do |missile|
       missile[1] -= 10
     end
-  end
-
-  def draw
-    # Ignore this
   end
 
   def draw_missiles
@@ -54,3 +67,18 @@ Reflecting on Principle
 4. In Metz' TRUE acronym, what does the E stand for and what does it mean?
 5. How does applying SRP naturally lead to good design?
 =end
+
+
+1. OOD promisses to give us tools to create software that is transparent- 
+consequences of changes are obvious in the code itself and the code dependent on it;
+ reasonable- the cost of changes is proportionate to the benefit 
+ ; usable, and exemplry- a model of efficient, clean programming. It will help us create
+ software that is flexible to change.
+
+2. Single Responsibility Principle, Open/Closed, Liskov Substitution, 
+Interface segregation, Dependency inversion
+
+3. False
+4. Exemplary
+
+5. It isolates objects and lessens dependency.
