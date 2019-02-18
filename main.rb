@@ -60,3 +60,15 @@ Reflecting on Principle
 3. What are two primary factors to consider when assessing the risk of a dependency?
 4. What is Metz's rule of thumb for choosing a dependency direction?
 =end
+___________
+=begin
+Answers
+
+1. True
+2. A class is dependent on another class if it knows the name ofanother class, if it
+ knows the name of the message it intends to send externally, if it knows the arguments and the 
+ order of the arguments that a message requires.
+3. Two factors to consider when asserting dependency are how often the requirements change and the 
+number of dependencies.
+4. Objects should always depend on the object that changes least.
+=end

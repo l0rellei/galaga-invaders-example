@@ -8,15 +8,25 @@ class Ship
 
   attr_accessor :x, :y
 
-  def initialize(screen_width, screen_height)
+  def initialize(screen_width, screen_height, missile)
     @x = screen_width / 2
     @y = screen_height - half_height
+    @missile = missile
   end
 
   def fire(missiles)
-    missile = Missile.new(x, top_edge)
-    missile.launch(-10)
+  #  missile = Missile.new(x, top_edge)
+  #  missile = new_missile
+  #  missile.launch(-10)
     missiles.add(missile)
+  end
+
+  def new_missile
+    Missile.new({x: x, y: top_edge, velocity: ordinance_velocity})
+  end
+
+  def ordinance_velocity
+    -10
   end
 
   def move_left

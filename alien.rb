@@ -23,8 +23,9 @@ class Alien
     "👾 (#{x}, #{y})"
   end
 
-  def fire(missiles)
-    missile = Missile.new(x, bottom_edge)
+#  def fire(missiles)
+  def fire(missile, missiles)
+#    missile = Missile.new(x, bottom_edge)
     missile.launch(10)
     missiles.add(missile)
   end
