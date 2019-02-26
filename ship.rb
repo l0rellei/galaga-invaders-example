@@ -13,6 +13,10 @@ class Ship
     @location = Vector.new(screen_width / 2, screen_height - half_height)
   end
 
+  def add(missile)
+    missile_collection.missiles << missile
+  end
+
   def muzzle_location
     Vector.new(location.x, top_edge)
   end

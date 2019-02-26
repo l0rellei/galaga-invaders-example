@@ -11,6 +11,10 @@ class Alien
     @location = Vector.new(200, 200)
   end
 
+  def add(missile)
+    missile_collection.missiles << missile
+  end
+
   def move
   end
 

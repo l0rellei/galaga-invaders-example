@@ -62,3 +62,23 @@ Reflecting on Principle
 3. True or False: Abstractions like duck typing make code explicitly easier to
    understand, vs. using concrete types.
 =end
+
+
+=begin
+ Answers
+ 1. Duck typing is classifying objects by how they act (what messages they respond to,
+ or what messages they expect) rather then what kind of objets they are. This allows 
+ objects to send or receive the same message from many different objects
+ without a care for the type of the senders or recipients(polymorphism).
+ This facilitates the implementationof DRY, TRUE code.
+
+ 2. When a class depends on kind_of?, is_a?, responds_to? or switch case statements
+ to send or receive messages, abstractions are not too far and duck types should 
+ follow.
+
+ 3. False.  
+=end
+
+
+
+
