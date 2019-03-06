@@ -1,5 +1,6 @@
 class Structure
-
+  include draw
+  
   DAMAGE = 1
 
   def initialize(args)
